@@ -1,0 +1,203 @@
+/* || General styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  /* font-size: 3rem; */
+  font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 3rem);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+main {
+  margin: 0 auto;
+  /* text-align: center; */
+  width: 60%;
+  color: #5c5c5b;
+}
+
+/* || Typography */
+
+main > p {
+  font-weight: 700;
+}
+
+main p {
+  /* font-size: 2rem; */
+  font-size: clamp(1rem, 0.8095rem + 0.9524vw, 2rem);
+  width: 100%;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+/* || Main Navigation */
+
+.contact-info {
+  margin-bottom: 8rem;
+}
+
+/* || SITEWIDE */
+
+nav {
+  background-color: #6a7c8c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+  width: 100%;
+}
+
+nav img {
+  margin-left: 2.5em;
+  width: 10rem;
+}
+
+.navbar-links-container {
+  min-width: 25%;
+  gap: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mr-coffee-center-black-logo {
+  text-align: center;
+}
+
+.mr-coffee-center-black-logo img {
+  width: 15rem;
+}
+
+footer {
+  color: #fff;
+  font-weight: 600;
+  background-color: #6a7c8c;
+  text-align: center;
+  height: 15vh;
+  width: 100%;
+  position: relative;
+}
+
+footer > img:first-of-type {
+  width: 5vh;
+  position: absolute;
+  left: 0;
+  margin-left: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.social-networks {
+  margin: 0 auto;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-networks-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-networks img {
+  width: 2rem;
+  margin-top: 1rem;
+}
+
+/* || UTILITIES */
+
+main > img {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav img {
+    width: 8rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  .mr-coffee-center-black-logo img {
+    width: 10rem;
+  }
+
+  main {
+    width: 100%;
+    text-align: center;
+  }
+
+  main > img {
+    max-width: 80%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h1,
+  .contact-info {
+    margin-bottom: 5rem;
+  }
+
+  h1 {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  nav {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  nav img {
+    margin: 1rem 0 0 0;
+  }
+
+  .navbar-links-container {
+    margin: 1rem 0 1rem 0;
+  }
+
+  footer > img:first-of-type {
+    margin-left: 1rem;
+    width: 2.25rem;
+  }
+
+  main > img {
+    min-width: 300px;
+  }
+
+  h1,
+  .contact-info {
+    margin-bottom: 3rem;
+  }
+}

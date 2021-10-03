@@ -1,0 +1,281 @@
+/* || General styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* border: solid red 1px; */
+}
+
+h2 {
+  font-size: clamp(1.75rem, 1.5119rem + 1.1905vw, 3rem);
+  font-weight: 500;
+  line-height: 4rem;
+  margin-bottom: 4rem;
+  width: 90%;
+}
+
+main {
+  margin: 0 auto;
+  width: 90%;
+  color: #5c5c5b;
+}
+
+/* || Typography */
+
+main > p {
+  margin: 4.5rem 0;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 5rem;
+}
+
+main p {
+  /* font-size: 1.8rem; */
+  font-size: clamp(1rem, 0.8476rem + 0.7619vw, 1.8rem);
+  margin-bottom: 2.5rem;
+  width: 100%;
+  font-weight: 500;
+  line-height: 2.75rem;
+}
+
+/* || Main Navigation */
+
+.mr-coffee-center-black-logo {
+  text-align: center;
+}
+
+.mr-coffee-center-black-logo img {
+  width: 15rem;
+}
+
+.text-and-picture {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.first-section > h2,
+.second-section > h2 {
+  display: none;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 9rem;
+}
+
+.text-left {
+  width: 50%;
+}
+
+.text-left p:last-child {
+  margin-bottom: 0;
+}
+
+.first-section img {
+  width: 40%;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 9rem;
+}
+
+.second-section img {
+  width: 40%;
+}
+
+.text-right {
+  width: 50%;
+}
+
+.text-right p:last-child {
+  margin-bottom: 0;
+}
+
+/* || SITEWIDE */
+
+nav {
+  background-color: #6a7c8c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+  width: 100%;
+}
+
+nav img {
+  margin-left: 2.5em;
+  width: 10rem;
+}
+
+.navbar-links-container {
+  min-width: 25%;
+  gap: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+footer {
+  font-weight: 600;
+  color: #fff;
+  background-color: #6a7c8c;
+  text-align: center;
+  height: 15vh;
+  width: 100%;
+  position: relative;
+}
+
+footer > img:first-of-type {
+  width: 5vh;
+  position: absolute;
+  left: 0;
+  margin-left: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.social-networks {
+  margin: 0 auto;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-networks-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-networks img {
+  width: 2rem;
+  margin-top: 1rem;
+}
+
+/* || UTILITIES */
+
+@media screen and (max-width: 1500px) {
+  .first-section > h2,
+  .second-section > h2 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .text-left > h2,
+  .text-right > h2 {
+    display: none;
+  }
+
+  .first-section,
+  .second-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-and-picture {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .text-and-picture {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+
+  .first-section img {
+    order: -1;
+    min-width: 283px;
+  }
+
+  .second-section img {
+    min-width: 283px;
+  }
+
+  .text-left,
+  .text-right {
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .first-section,
+  .second-section {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav img {
+    width: 8rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  .mr-coffee-center-black-logo img {
+    width: 10rem;
+  }
+
+  .text-and-picture {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  main p {
+    line-height: 2rem;
+  }
+
+  h2 {
+    line-height: 3rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  nav {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  nav img {
+    margin: 1rem 0 0 0;
+  }
+
+  .navbar-links-container {
+    margin: 1rem 0 1rem 0;
+  }
+
+  footer > img:first-of-type {
+    margin-left: 1rem;
+    width: 2.25rem;
+  }
+}
