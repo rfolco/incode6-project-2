@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Regular expressions for validating user's entries
 
-    const nameRegex = /[A-Z][a-zA-Z][^#&<>\"~;$^%{}?]{1,20}$/;
-    const surnameRegex = /[A-Z][a-zA-Z][^#&<>\"~;$^%{}?]{1,20}$/;
+    const nameRegex = /[A-Z][a-zA-Z][^#&<>\"~;$^%{}?]{0,20}$/;
+    const surnameRegex = /[A-Z][a-zA-Z][^#&<>\"~;$^%{}?]{0,20}$/;
     const phoneRegex =
       /^(?:\+?61|0)4 ?(?:(?:[01] ?[0-9]|2 ?[0-57-9]|3 ?[1-9]|4 ?[7-9]|5 ?[018]) ?[0-9]|3 ?0 ?[0-5])(?: ?[0-9]){5}$/;
     const emailRegex =
